@@ -86,3 +86,8 @@ def index():
 @app.route("/auth/login")
 def login():
     return render_template("login.html")
+
+
+@app.route("/assistant")
+def assistant():
+    return render_template("assistant.html")
