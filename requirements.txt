@@ -1,0 +1,6 @@
+autopep8
+flask-bcrypt
+flask-wtf
+gtts
+pip-chill
+speechrecognition
