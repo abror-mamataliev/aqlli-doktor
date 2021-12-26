@@ -1,2 +1,0 @@
-# aqlli-doktor
-Aqlli doktor

@@ -1,6 +1,7 @@
 autopep8
-flask-bcrypt
-flask-wtf
 gtts
 pip-chill
+playsound
+pyaudio
+pydub
 speechrecognition
