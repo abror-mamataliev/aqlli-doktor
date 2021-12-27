@@ -16,13 +16,24 @@ texts = [
     "Mazzam bo'madi",
     "Mazam bo'madi",
     "Mazam bo'lmadi",
-    "Mazam bo'lmayapti"
+    "Mazam bo'lmayapti",
+    "Mazam boʻlmayapti",
+    "Mazzam boʻlmayapti",
     "Tishim og'riyapti",
     "Tishim og'ridi",
+    "Tishim ogʻridi",
+    "Tishim ogʻriyapti",
     "Bir hafta",
+    "1 hafta",
+    "1-hafta",
     "Uch kun",
+    "3 kun",
+    "3-kun",
     "Bir kun",
-    "2-3 soat"
+    "1-kun",
+    "1 kun",
+    "3 soat",
+    "3 soat"
 ]
 global illness
 illness = False
@@ -159,13 +170,13 @@ def main(answer="", previous_question=""):
         return
     elif answer in ["Assalomu aleykum", "Salom"]:
         main(listener("Sizga qanday yordam berolaman?"), "Sizga qanday yordam berolaman?")
-    elif answer in ["Mazzam bo'lmayapti", "Mazzam bo'lmadi", "Mazzam bo'madi", "Mazam bo'madi", "Mazam bo'lmadi", "Mazam bo'lmayapti"]:
+    elif answer in ["Mazzam bo'lmayapti", "Mazzam bo'lmadi", "Mazzam bo'madi", "Mazam bo'madi", "Mazam bo'lmadi", "Mazam bo'lmayapti", "Mazam boʻlmayapti", "Mazzam boʻlmayapti"]:
         main(listener("Siz qachondan beri o'zingizni yomon his qilayapsiz?"), "Siz qachondan beri o'zingizni yomon his qilayapsiz?")
         illness = True
-    elif answer in ["Tishim og'riyapti", "Tishim og'ridi"]:
+    elif answer in ["Tishim og'riyapti", "Tishim og'ridi", "Tishim ogʻridi", "Tishim ogʻriyapti"]:
         main(listener("Qachondan beri tishingiz bezovta qilmoqda?"), "Qachondan beri tishingiz bezovta qilmoqda?")
         tooth = True
-    elif answer in ["Bir hafta", "Uch kun", "Bir kun", "2-3 soat"]:
+    elif answer in ["Bir hafta", "1 hafta", "1-hafta", "Uch kun", "3 kun", "3-kun", "Bir kun", "1-kun", "1 kun", "3 soat", "3 soat"]:
         if illness:
             main(listener("Biz sizni terapevtimiz bilan bog'laymiz\n\t\tSog'ligizni asrang"), "Biz sizni terapevtimiz bilan bog'laymiz\n\t\tSog'ligizni asrang")
         elif tooth:
